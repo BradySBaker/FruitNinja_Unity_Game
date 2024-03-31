@@ -1,0 +1,61 @@
+# Ignore Visual Studio files
+.vs/
+.vsconfig
+
+# Ignore Unity specific files and directories
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+
+
+# Ignore other generated Unity files
+*.meta
+*.pidb.meta
+*.crashlytics
+*.dblite
+
+# Ignore specific Visual Studio files
+.vscode/
+*.sln.cache
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore macOS folder attributes
+.DS_Store
+._*
+*.DS_Store?
+.BS_Store
+
+# Ignore Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+
+# Ignore package files
+Packages/
+
+# Exclude specific imported files while keeping prefabs
+!Assets/*.prefab
+
+# Ignore 3D model files
+*.fbx
+*.obj
+*.blend
+# Add other 3D model file extensions as needed
+
+# Exclude common Unity generated files except scenes and camera settings
+!*.unity
+!ProjectSettings/EditorBuildSettings.asset
+!ProjectSettings/GraphicsSettings.asset
+!ProjectSettings/InputManager.asset
+!ProjectSettings/TagManager.asset
+!ProjectSettings/TimeManager.asset
+!ProjectSettings/AudioManager.asset
+!ProjectSettings/ClusterInputManager.asset
+!ProjectSettings/DynamicsManager.asset
