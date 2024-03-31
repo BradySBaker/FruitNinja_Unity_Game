@@ -7,6 +7,10 @@ public class Fruit : MonoBehaviour
 
     Rigidbody2D rb;
 
+    private void Start() {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
             CreateSlicedFruit();
@@ -20,12 +24,12 @@ public class Fruit : MonoBehaviour
         Rigidbody[] rbsOnSliced = inst.GetComponentsInChildren<Rigidbody>();
 
         foreach (Rigidbody r in rbsOnSliced) {
-            r.velocity = new Vector3(0, rb.velocity.y, 0);
+            r.velocity = rb.velocity;
             r.transform.rotation = Random.rotation; 
 
             Vector3 explosionDirection = Random.onUnitSphere;
 
-            float explosionForce = Random.Range(3, 10);
+            float explosionForce = Random.Range(1, 4);
 
             r.AddForce(explosionDirection * explosionForce, ForceMode.Impulse);
 
