@@ -7,7 +7,7 @@ public class Fruit_Spawner : MonoBehaviour
 {
     public Transform[] spawnPlaces;
 
-    public GameObject[] fruitToSpawn;
+    public GameObject[] foodToSpawn;
     public float minWait = .3f;
     public float maxWait = 1f;
     void Start()
@@ -23,12 +23,15 @@ public class Fruit_Spawner : MonoBehaviour
             
             Transform t = spawnPlaces[Random.Range(0, spawnPlaces.Length)];
 
-            GameObject fruit = Instantiate(fruitToSpawn[Random.Range(0, fruitToSpawn.Length)], t.position, t.rotation);
+            GameObject food = Instantiate(foodToSpawn[Random.Range(0, foodToSpawn.Length)], t.position, t.rotation);
 
-            fruit.GetComponent<Rigidbody2D>().AddForce(t.transform.up * Random.Range(25, 35), ForceMode2D.Impulse);
+            Rigidbody2D rb = food.GetComponent<Rigidbody2D>();
 
+            rb.AddForce(t.transform.up * Random.Range(25, 35), ForceMode2D.Impulse);
 
-            Destroy(fruit, 5);
+            rb.AddTorque(Random.Range(-2, 2), ForceMode2D.Impulse);
+
+            Destroy(food, 5);
         }
     }
 }

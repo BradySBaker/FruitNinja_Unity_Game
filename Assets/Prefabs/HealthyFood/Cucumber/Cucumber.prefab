@@ -275,4 +275,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1adc9fc18a7f6d340a43e150a06cc6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slicedFruitPrefab: {fileID: 5947707864621941657, guid: 5fdc510dd05a23a499769b5516287ce8, type: 3}
+  slicedFoodPrefab: {fileID: 5947707864621941657, guid: 5fdc510dd05a23a499769b5516287ce8, type: 3}
+  gameManager: {fileID: 0}

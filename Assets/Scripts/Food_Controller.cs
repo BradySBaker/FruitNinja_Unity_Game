@@ -1,15 +1,20 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Fruit : MonoBehaviour
+public class Food_Controller : MonoBehaviour
 {
-    public GameObject slicedFruitPrefab;
-    private float pushForce = 20f;
+    public GameObject slicedFoodPrefab;
+    public GameManager gameManager;
     private float spawnTime = 0;
 
     Rigidbody2D rb;
 
     private void Start() {
         spawnTime = Time.fixedTime;
+        gameManager = FindObjectOfType<GameManager>();
+        if ( gameManager == null ) {
+            Debug.LogError("Cannot find GameManager!!!");
+        }
     }
 
     private void Awake() {
@@ -17,8 +22,8 @@ public class Fruit : MonoBehaviour
     }
 
 
-    public void CreateSlicedFruit() {
-        GameObject inst = Instantiate(slicedFruitPrefab, transform.position, transform.rotation);
+    public void CreateSlicedFood() {
+        GameObject inst = Instantiate(slicedFoodPrefab, transform.position, transform.rotation);
 
 
         Rigidbody[] rbsOnSliced = inst.GetComponentsInChildren<Rigidbody>();
@@ -65,7 +70,9 @@ public class Fruit : MonoBehaviour
 
         if (!b) { return; }
 
-        CreateSlicedFruit();
+        gameManager.AdjustPlayerHealthOrScore(gameObject.tag);
+
+        CreateSlicedFood();
     }
 
 }
