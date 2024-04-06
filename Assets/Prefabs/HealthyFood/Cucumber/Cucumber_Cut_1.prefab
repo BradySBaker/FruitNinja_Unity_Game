@@ -122,6 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slicedFoodPrefab: {fileID: 4357374927619717360, guid: 4a26b16cbeddad240a7a51807df9b9fc, type: 3}
   gameManager: {fileID: 0}
+  particlePrefab: {fileID: 2324489135037491942, guid: 9dae8d7963acda74296035dbd9fc0b0a, type: 3}
+  sliceColor: {r: 0.18509269, g: 1, b: 0, a: 1}
 --- !u!1 &1153424325372917331
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +498,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slicedFoodPrefab: {fileID: 8454017264678542976, guid: f11eb00822333634192bf0a478585c4c, type: 3}
   gameManager: {fileID: 0}
+  particlePrefab: {fileID: 2324489135037491942, guid: 9dae8d7963acda74296035dbd9fc0b0a, type: 3}
+  sliceColor: {r: 0.048099518, g: 1, b: 0, a: 1}
 --- !u!1 &5947707864621941657
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +511,7 @@ GameObject:
   - component: {fileID: 6204427890764032652}
   m_Layer: 0
   m_Name: Cucumber_Cut_1
-  m_TagString: Untagged
+  m_TagString: entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

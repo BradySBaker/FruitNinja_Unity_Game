@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Fruit_Spawner : MonoBehaviour
+public class Food_Spawner : MonoBehaviour
 {
     public Transform[] spawnPlaces;
 
     public GameObject[] foodToSpawn;
-    public float minWait = .3f;
-    public float maxWait = 1f;
+
+    [HideInInspector] public float minWait = 5f;
+    [HideInInspector] public float maxWait = 7f;
+
+    [HideInInspector] public float subtractionSpeed = .2f;
+
     void Start()
     {
         StartCoroutine(SpawnFruit());
@@ -32,6 +36,18 @@ public class Fruit_Spawner : MonoBehaviour
             rb.AddTorque(Random.Range(-2, 2), ForceMode2D.Impulse);
 
             Destroy(food, 5);
+
+
+            if (minWait > .05) {
+                minWait -= subtractionSpeed;
+                maxWait -= subtractionSpeed;
+
+                if (subtractionSpeed > .01) {
+                    subtractionSpeed -= .01f;
+                }
+            }
+
+
         }
     }
 }

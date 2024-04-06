@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Food_Controller.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\PlayButton_Controller.cs" />
     <Compile Include="Assets\Scripts\FoodSpawner_Controller.cs" />
     <Compile Include="Assets\Scripts\Blade_Controller.cs" />
   </ItemGroup>

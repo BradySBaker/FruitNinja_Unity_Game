@@ -136,6 +136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cucumber
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a6f76c4eac5b2c4ca05bc695a8ad054, type: 3}
+      propertyPath: m_TagString
+      value: entity
+      objectReference: {fileID: 0}
     - target: {fileID: 1378090415999995971, guid: 7a6f76c4eac5b2c4ca05bc695a8ad054, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -277,3 +281,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slicedFoodPrefab: {fileID: 5947707864621941657, guid: 5fdc510dd05a23a499769b5516287ce8, type: 3}
   gameManager: {fileID: 0}
+  particlePrefab: {fileID: 2324489135037491942, guid: 9dae8d7963acda74296035dbd9fc0b0a, type: 3}
+  sliceColor: {r: 0.10958028, g: 1, b: 0, a: 1}

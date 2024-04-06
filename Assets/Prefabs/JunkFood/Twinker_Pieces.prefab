@@ -134,12 +134,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f906d41bfb94db45af8906a9e912ca4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8277966424784831042}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f906d41bfb94db45af8906a9e912ca4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 447722962367014848}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f906d41bfb94db45af8906a9e912ca4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8846490792867789449}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 5f906d41bfb94db45af8906a9e912ca4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5858084043213848760}
@@ -283,32 +277,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3, y: 1}
   m_EdgeRadius: 0
---- !u!114 &447722962367014848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5225201642585685826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1adc9fc18a7f6d340a43e150a06cc6d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slicedFruitPrefab: {fileID: 0}
---- !u!114 &8846490792867789449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5225201642585685826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1adc9fc18a7f6d340a43e150a06cc6d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slicedFruitPrefab: {fileID: 0}
 --- !u!1 &5750726636678180983 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 5f906d41bfb94db45af8906a9e912ca4, type: 3}

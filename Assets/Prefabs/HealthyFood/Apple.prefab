@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6274486927273519909}
   m_Layer: 0
   m_Name: Apple
-  m_TagString: Untagged
+  m_TagString: entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slicedFoodPrefab: {fileID: 9041832595012312545, guid: b0e7d99d54c6ddb4fa29f04a333bf7eb, type: 3}
   gameManager: {fileID: 0}
+  particlePrefab: {fileID: 2324489135037491942, guid: 9dae8d7963acda74296035dbd9fc0b0a, type: 3}
+  sliceColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1001 &5971526481573840759
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,20 +5,37 @@ public class Food_Controller : MonoBehaviour
 {
     public GameObject slicedFoodPrefab;
     public GameManager gameManager;
+
+    public GameObject particlePrefab;
+
+    public Color sliceColor;
     private float spawnTime = 0;
+
+    private int particleCount = 0;
 
     Rigidbody2D rb;
 
     private void Start() {
         spawnTime = Time.fixedTime;
         gameManager = FindObjectOfType<GameManager>();
-        if ( gameManager == null ) {
+        if ( gameManager == null) {
             Debug.LogError("Cannot find GameManager!!!");
         }
     }
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+
+    private void SpawnAndAttachParticles(Transform t) {
+        if (particleCount > 1) {
+            return;
+        }
+        GameObject particleInst = Instantiate(particlePrefab, t.position, Quaternion.identity);
+        particleInst.GetComponent<ParticleSystem>().startColor = sliceColor;
+        particleInst.transform.SetParent(t);
+        particleCount++;
     }
 
 
@@ -40,6 +57,7 @@ public class Food_Controller : MonoBehaviour
 
                 r.AddForce(explosionDirection * explosionForce, ForceMode2D.Impulse);
 
+                SpawnAndAttachParticles(r.transform);
             }
         }
 
@@ -53,6 +71,8 @@ public class Food_Controller : MonoBehaviour
 
             r.AddForce(explosionDirection * explosionForce, ForceMode.Impulse);
 
+
+            SpawnAndAttachParticles(r.transform);
         }
         Destroy(inst, 5);
         Destroy(gameObject);
@@ -66,9 +86,14 @@ public class Food_Controller : MonoBehaviour
 
         Blade_Controller b = collision.GetComponent<Blade_Controller>();
 
+        if (!b) {
+            if (collision.tag == "DeathArea") {
+                gameManager.DecreaseHealth(tag);
+            }
+            return; 
+        }
 
 
-        if (!b) { return; }
 
         gameManager.AdjustPlayerHealthOrScore(gameObject.tag);
 

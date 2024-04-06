@@ -290,3 +290,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slicedFoodPrefab: {fileID: 2150684097818389104, guid: a0ad342d8ecfe694fa16cd10ee1ce0b7, type: 3}
   gameManager: {fileID: 0}
+  particlePrefab: {fileID: 2324489135037491942, guid: 9dae8d7963acda74296035dbd9fc0b0a, type: 3}
+  sliceColor: {r: 1, g: 0.5704757, b: 0, a: 1}
