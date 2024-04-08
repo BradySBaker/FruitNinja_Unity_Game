@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 {
     bool healthMode = true;
 
+    public AudioSource audioS;
+
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI healthText;
     public GameObject menuUI;
@@ -78,7 +80,11 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void AdjustPlayerHealthOrScore(string foodType) {
+    public void HandleFruitHit(string foodType, AudioClip sound) {
+        audioS.clip = sound;
+        audioS.pitch = Random.Range(.7f, 2);
+        audioS.Play();
+
         if (healthMode && foodType != "Junk" || !healthMode && foodType == "Junk") {
             score++;
             scoreSinceLastIncrease++;

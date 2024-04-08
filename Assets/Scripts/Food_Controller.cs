@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Food_Controller : MonoBehaviour
 {
+    public AudioClip sound;
     public GameObject slicedFoodPrefab;
     public GameManager gameManager;
 
@@ -93,9 +94,7 @@ public class Food_Controller : MonoBehaviour
             return; 
         }
 
-
-
-        gameManager.AdjustPlayerHealthOrScore(gameObject.tag);
+        gameManager.HandleFruitHit(gameObject.tag, sound);
 
         CreateSlicedFood();
     }
